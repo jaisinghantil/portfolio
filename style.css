@@ -1,0 +1,135 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* 3D BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  perspective: 1200px;
+  z-index: -1;
+}
+
+.layer {
+  position: absolute;
+  inset: -20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: float 30s linear infinite;
+}
+
+.layer-back {
+  background: radial-gradient(circle at 20% 30%, #1e3a8a, transparent 60%);
+  transform: translateZ(-300px);
+}
+
+.layer-mid {
+  background: radial-gradient(circle at 80% 50%, #0f766e, transparent 60%);
+  transform: translateZ(-150px);
+}
+
+.layer-front {
+  background: radial-gradient(circle at 50% 80%, #eab30822, transparent 60%);
+  transform: translateZ(0);
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5%); }
+}
+
+/* CONTENT */
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 6rem 1.5rem;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+/* HERO */
+.hero h1 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.mission {
+  max-width: 700px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* HEADINGS */
+h2 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #2dd4bf;
+  padding-left: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #eab308;
+}
+
+/* TEXT */
+p {
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+/* CASE STUDY */
+.case-study {
+  border: 1px solid #1e293b;
+  padding: 2rem;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #020617, #020617cc);
+}
+
+.tagline {
+  color: #2dd4bf;
+  margin-bottom: 1.5rem;
+}
+
+/* LINKS */
+a {
+  color: #2dd4bf;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+    } 
